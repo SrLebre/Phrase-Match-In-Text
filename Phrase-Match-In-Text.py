@@ -50,6 +50,5 @@ def pmit(phrase,text,min_word_size=3):
             match_ratio = sm(None, " ".join(phrase), " ".join(paragraph[begin:end])).ratio()
             if match_ratio > highest_match_ratio[0]:
                 highest_match_ratio[0] = match_ratio
-            else:
     result = highest_match_ratio[0]**(1/len(phrase))
     return result
